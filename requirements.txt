@@ -1,0 +1,7 @@
+streamlit
+pandas
+influx_loader
+io
+zipfile
+pytz
+influxdb_client
