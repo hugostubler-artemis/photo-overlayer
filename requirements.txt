@@ -1,6 +1,5 @@
 streamlit
 pandas
 pillow
-zipfile
 pytz
 influxdb_client
