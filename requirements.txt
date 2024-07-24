@@ -1,6 +1,6 @@
 streamlit
 pandas
-influx_loader
+pillow
 io
 zipfile
 pytz
