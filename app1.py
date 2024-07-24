@@ -81,7 +81,7 @@ if uploaded_files and analyze_button:
                                    toTime=datetime.strptime(f"{date} {toTime_}", "%Y-%m-%d %H:%M:%S"),
                                    freq="1s", whereTags=whereTags_)
             
-            var_test = ["TWS",'VMG%',"BSP","TWA","AWA_bow","AWS","Leeway","Rudder_Angle",
+            var_test = ["TWS",'VMG%',"BSP","Tgt_BSP,"TWA","AWA_bow","AWS","Leeway","Rudder_Angle",
                         "Heel","Trim","FoilCant","Flap",
                         "MainSheetLoad","Tgt_MainSheet",
                         "MainCunninghamLoad_kg","Tgt_MainCunninghamLoad_kg",
