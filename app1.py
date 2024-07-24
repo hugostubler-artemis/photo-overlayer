@@ -91,7 +91,8 @@ if uploaded_files and analyze_button:
                         "AverageClewPC","Tgt_Clew"]
             data_at_timestamp = data[var_test].round(2).iloc[0].to_dict()
             
-            font_path = "/Library/Fonts/Arial.ttf"  # Adjust the path based on your OS
+            #font_path = "/Library/Fonts/Arial.ttf"  # Adjust the path based on your OS
+            font_path = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
             
             modified_image = overlay_data_on_image(image.copy(), data_at_timestamp, font_path, font_size=100)
             
