@@ -88,7 +88,7 @@ if uploaded_files and analyze_button:
                         "JibSheetLoad","Tgt_JibSheetLoad",
                         "Tgt_FoilPort_Sink","Tgt_FoilStbd_Sink",
                         "MastRotation_angle","Traveller_angle",
-                        "AverageClewPC","Tgt_Clew"]
+                        "AverageClewPC","Link_angle"]
             data_at_timestamp = data[var_test].round(2).iloc[0].to_dict()
             
             #font_path = "/Library/Fonts/Arial.ttf"  # Adjust the path based on your OS
