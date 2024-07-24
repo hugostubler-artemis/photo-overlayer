@@ -117,4 +117,5 @@ def QueryInfluxData(
     df['VMG%'] = df.VMG/df.Tgt_VMG
     df['BSP%'] = df.BSP/df.Tgt_BSP
     df.Datetime = pd.to_datetime(df.Datetime)
+    df["Link_angle"] = df.Traveller_angle - df.MastRotation_angle
     return df
