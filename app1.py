@@ -66,7 +66,7 @@ if uploaded_files and analyze_button:
             
             # st.write(f"The photo was taken at {timestamp}")
             timestamp = datetime.strptime(timestamp, '%Y:%m:%d %H:%M:%S')
-            timestamp = timestamp - timedelta(hours=2)
+            timestamp = timestamp #- timedelta(hours=2)
             timestamp_start = timestamp - time_change
             # st.write(f'query from {timestamp_start} to {timestamp}')
             
