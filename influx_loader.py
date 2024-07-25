@@ -113,9 +113,10 @@ def QueryInfluxData(
     df.index = df.index.strftime('%Y-%m-%d %H:%M:%S')
     #st.write(df)
     st.success("data uploaded.")
+    st.write(df)
     df['Datetime'] = df.index
-    # df['VMG%'] = df.VMG/df.Tgt_VMG
-    df['BSP%'] = df.BSP/df.Tgt_BSP
+    df['VMG%'] = 100#df.VMG/df.Tgt_VMG
+    df['BSP%'] = 100 df.BSP/df.Tgt_BSP
     df.Datetime = pd.to_datetime(df.Datetime)
     df["Link_angle"] = df.Traveller_angle - df.MastRotation_angle
     return df
