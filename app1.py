@@ -33,6 +33,30 @@ def get_exif_data(image):
                 return value
     return None
 
+def get_exif_data(image_path):
+    """Extract EXIF data from an image file and find the timestamp."""
+    # Load image using PIL
+    image = Image.open(image_path)
+    
+    # Check if the image has EXIF data
+    try:
+        exif_data = piexif.load(image.info['exif'])
+    except (KeyError, AttributeError, piexif._exceptions.InvalidImageDataError):
+        # If there's an error or no EXIF data, return None
+        exif_data = None
+
+    # List of possible EXIF keys for date and time
+    date_tags = ['DateTime', 'DateTimeOriginal', 'DateTimeDigitized']
+
+    if exif_data:
+        for ifd in exif_data:
+            for tag in exif_data[ifd]:
+                tag_name = piexif.TAGS[ifd][tag]["name"]
+                if tag_name in date_tags:
+                    return exif_data[ifd][tag].decode('utf-8')
+
+    return None
+
 def overlay_data_on_image(image, data, font_path, font_size=50):
     """Overlay data on the image."""
     draw = ImageDraw.Draw(image)
