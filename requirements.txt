@@ -3,3 +3,4 @@ pandas
 pillow
 pytz
 influxdb_client
+piexif
