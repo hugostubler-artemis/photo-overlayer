@@ -15,8 +15,12 @@ from datetime import datetime, timedelta
 INFLUXDB_API_URL = "https://influxdb.artemisracing.com"
 INFLUXDB_ORGANISATION = "ArtemisRacing"
 
-INFLUXDB_TOKEN = "Q0Q77KR-MasuFGIJGapH5EvXhCMHd_fE4GssuJWog0FlYP6MJU3zgjXYjL7Vd9aibEPRqY-KXGkYfK6sEtaCdw=="  # token for AC40
-INFLUXDB_BUCKET = "AC40"
+# INFLUXDB_TOKEN = "Q0Q77KR-MasuFGIJGapH5EvXhCMHd_fE4GssuJWog0FlYP6MJU3zgjXYjL7Vd9aibEPRqY-KXGkYfK6sEtaCdw=="  # token for AC40
+# INFLUXDB_BUCKET = "AC40"
+
+INFLUXDB_TOKEN = "PO7FHrexOjCPTrjiu7vdLgXz3eJwT0jlzEWcntgnvmXfFlphCPlJ2oWZcE4rxw_VTndiAQX5rZULx93K-vd2Lw==" # token for AC40_RT
+INFLUXDB_BUCKET_RT = "AC40_RT"
+
 
 INFLUXDB_MAX_POINTS_BULK_UPLOAD = 5000
 
