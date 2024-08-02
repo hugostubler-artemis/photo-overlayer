@@ -20,18 +20,7 @@ def get_exif_data(image):
                 return value
     return None
 
-def get_exif_data(image):
-    """Extract EXIF data from an image and find the timestamp."""
-    exif_data = image._getexif()
-    if exif_data is not None:
-        # Define a list of potential tags for date and time information
-        date_tags = ["DateTime", "DateTimeOriginal", "DateTimeDigitized"]
 
-        for tag, value in exif_data.items():
-            decoded_tag = ExifTags.TAGS.get(tag, tag)
-            if decoded_tag in date_tags:
-                return value
-    return None
 
 
 def overlay_data_on_image(image, data, font_path, font_size=50):
