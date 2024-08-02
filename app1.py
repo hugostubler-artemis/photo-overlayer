@@ -6,6 +6,7 @@ from influx_loader import QueryInfluxData, INFLUXDB_BUCKET
 import io
 import zipfile
 from datetime import datetime, timedelta
+import piexif
 
 varMapping = pd.read_csv('InfluxDB_variables.csv')
 
