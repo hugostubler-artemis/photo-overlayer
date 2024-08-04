@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image, ImageDraw, ImageFont
 import pandas as pd
 import PIL.ExifTags
-from influx_loader import QueryInfluxData, INFLUXDB_BUCKET_RT
+from influx_loader import QueryInfluxData, INFLUXDB_BUCKET
 import io
 import zipfile
 from datetime import datetime, timedelta
@@ -82,7 +82,7 @@ if uploaded_files and analyze_button:
             
             start_time = timestamp_start.isoformat() + "Z"
             end_time = timestamp.isoformat() + "Z"
-            data = QueryInfluxData(INFLUXDB_BUCKET_RT, varMapping,
+            data = QueryInfluxData(INFLUXDB_BUCKET, varMapping,
                                    fromTime=datetime.strptime(f"{date} {fromTime_}", "%Y-%m-%d %H:%M:%S"),
                                    toTime=datetime.strptime(f"{date} {toTime_}", "%Y-%m-%d %H:%M:%S"),
                                    freq="1s", whereTags=whereTags_)
